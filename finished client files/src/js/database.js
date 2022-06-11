@@ -34,8 +34,11 @@ export const getDb = async () => {
 
   const jateDb = await openDB("jate", 1 );
   const store = tx.objectStore("jate");
-  const tx = ();
-  const ();
+  const tx = jateDb.transaction("jate", "read only" );
+  const request = store.get(1);
+  const result = await request;
+
+  return result;
 }
 
 console.error('getDb not implemented');
