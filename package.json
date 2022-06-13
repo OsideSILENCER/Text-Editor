@@ -4,8 +4,12 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js"
+      "start": "npm run build && cd server && npm start",
+      "server": "",
+      "build": "cd client && npm run build",
+      "install": "cd client && npm install && cd ../server && npm install",
+      "client": "",
+      "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
